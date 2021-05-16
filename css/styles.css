@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+ul{
+    list-style-type: none;
+}
+
+li{
+    text-align: center;
+    color: #000000;
+    text-decoration: none;
+    font-size: large;
+}
+a {
+    text-decoration: none !important;   
+
+}
+a:link {
+    color: #000000;
+  }
+
+li a{
+    text-decoration: none;
+}
+
+.product-listing{
+    background-color: #E7E3EB;
+    width: 90%;
+}
+
+
+.list-product-img{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100px;
+    height: 100px;
+
+}
+
+.list-product-name{
+    width: 10%;
+    margin-top: -80px;
+    margin-left: 125px;
+}
+
