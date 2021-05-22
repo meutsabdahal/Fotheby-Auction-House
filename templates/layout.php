@@ -3,6 +3,9 @@
     function getURL($parameters = null){
 		return "http://localhost/Fotheby-Auction-House/" . $parameters;
 	}
+    
+    $category = new DatabaseTable('category');
+    $categories = $category->findAll();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -10,7 +13,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title><?php echo $title; ?></title>
-    <link rel="stylesheet" type="text/css" href="<?php echo getURL('css/styles.css'); ?>">
+    <link rel="stylesheet" type="text/css" href="<?php echo getURL('css/style.css'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -24,25 +27,18 @@
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                </li>
+                <?php
+                    foreach ($categories as $category) {
+                ?>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><?php echo $category['label']; ?></a>
+                        </li>
+                <?php
+                    }
+                ?>
 
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                </li>
 
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                </li>
+                
 
                 </ul>
                 <form class="form-inline my-2 my-lg-0">

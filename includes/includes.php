@@ -7,4 +7,8 @@
     require baseURL('db/dbConnect.php');
 	require baseURL('classes/classes.php');
 
+
+    $category = new DatabaseTable('category');
+    $product = new DatabaseTable('products');
+
 ?>

@@ -36,44 +36,19 @@
     </div>
     <hr />
     <div class=" mt-2 ml-5">
-        <div class="product-listing mt-3">
-            <img src="img/Antique.jpg" class="product-view-img ml-3 list-product-img">
-            <b class="ml-2">Antique</b> 
-            <a class="btn btn-primary button" style="margin-left: 60%;" href="products.php?op=list&cat=1">View Product</a>
-        </div>   
-
-
-        <div class="product-listing mt-3">
-            <img src="img/Antique.jpg" class="product-view-img ml-3 list-product-img">
-            <b class="ml-2">Antique</b> 
-            <a class="btn btn-primary button" style="margin-left: 60%;" href="products.php?op=list&cat=1">View Product</a>
-        </div>
-        
-        <div class="product-listing mt-3">
-            <img src="img/Antique.jpg" class="product-view-img ml-3 list-product-img">
-            <b class="ml-2">Antique</b> 
-            <a class="btn btn-primary button" style="margin-left: 60%;" href="products.php?op=list&cat=1">View Product</a>
-        </div>   
-
-        <div class="product-listing mt-3">
-            <img src="img/Antique.jpg" class="product-view-img ml-3 list-product-img">
-            <b class="ml-2">Antique</b> 
-            <a class="btn btn-primary button" style="margin-left: 60%;" href="products.php?op=list&cat=1">View Product</a>
-        </div>   
-
-        <div class="product-listing mt-3">
-            <img src="img/Antique.jpg" class="product-view-img ml-3 list-product-img">
-            <b class="ml-2">Antique</b> 
-            <a class="btn btn-primary button" style="margin-left: 60%;" href="products.php?op=list&cat=1">View Product</a>
-        </div>   
-
-        <div class="product-listing mt-3">
-            <img src="img/Antique.jpg" class="product-view-img ml-3 list-product-img">
-            <b class="ml-2">Antique</b> 
-            <a class="btn btn-primary button" style="margin-left: 60%;" href="products.php?op=list&cat=1">View Product</a>
-        </div>   
-        
-        
+        <?php
+            foreach ($products as $product) {
+            ?>
+                <div class="product-listing mt-3">
+                    <img src="productimages/<?php echo $product['image']; ?>" class="product-view-img ml-3 list-product-img">
+                    <b class="ml-2"><?php echo $product['title']; ?></b> 
+                    <div class="float-right mr-5 mt-4">
+                        <a class="btn btn-primary" style="margin-left: 60%;" href="product?pId=<?php echo $product['pid']; ?>">View Product</a>
+                    </div>
+                </div>   
+            <?php
+            }
+        ?>        
         
     </div>
 </section>

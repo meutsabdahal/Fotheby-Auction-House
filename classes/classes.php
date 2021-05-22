@@ -11,6 +11,16 @@
             $stmt->execute();
             return $stmt;
         }
+
+        function find($field, $value){
+            global $pdo;
+            $stmt = $pdo->prepare("SELECT * FROM $this->table WHERE $field =:value");
+            $criteria = [
+                "value" => $value
+            ];
+            $stmt->execute($criteria);
+            return $stmt;
+        }
     }
 
 

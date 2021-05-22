@@ -44,4 +44,9 @@ li a{
     margin-top: -80px;
     margin-left: 125px;
 }
-
+.description{
+    min-height: 600px;
+}
+footer{
+    background-color: red;
+}

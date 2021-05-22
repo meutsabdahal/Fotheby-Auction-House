@@ -1,6 +1,8 @@
 <?php
+	
+	$products = $product->findAll();
 
-	$title = "Fothey";
+	$title = "Fothey's Auction House";
 
-	$content = loadTemplate('templates/home.php',[]);
+	$content = loadTemplate('templates/home.php',['products' => $products]);
 ?>
