@@ -10,5 +10,6 @@
 
     $category = new DatabaseTable('category');
     $product = new DatabaseTable('products');
+    $client = new DatabaseTable('client');
 
 ?>

@@ -4,8 +4,7 @@
 		return "http://localhost/Fotheby-Auction-House/" . $parameters;
 	}
     
-    $category = new DatabaseTable('category');
-    $categories = $category->findAll();
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -23,30 +22,6 @@
 <body>
     <header class="mt-2">
         <center><a href="home"><img src="<?php echo getURL('img/logo.jpg'); ?>"></a></center>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                <?php
-                    foreach ($categories as $category) {
-                ?>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#"><?php echo $category['label']; ?></a>
-                        </li>
-                <?php
-                    }
-                ?>
-
-
-                
-
-                </ul>
-                <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                </form>
-            </div>
-        </nav>
 
     </header>
     

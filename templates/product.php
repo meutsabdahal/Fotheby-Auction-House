@@ -1,3 +1,6 @@
+<?php
+    include 'navigation.php';
+?>
 <section>
     <hr/>
     <?php

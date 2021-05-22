@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+
 }
 
 ul{
@@ -44,9 +45,30 @@ li a{
     margin-top: -80px;
     margin-left: 125px;
 }
+
 .description{
     min-height: 600px;
 }
+
+.adminNav{
+    background-color: #E7E3EB;
+    width: 10%;
+    min-height: 650px;
+}
+
+.adminLogOut{
+    width: 10%;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    /* background-color: #000000; */
+    color: #FFFFFF;
+}
+
+table{
+    width: 90% !important;
+}
+
 footer{
     background-color: red;
 }
