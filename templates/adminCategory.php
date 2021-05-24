@@ -2,7 +2,8 @@
     include 'adminNavigation.php';
 ?>
 <h1 class="text-center mt-1 font-italic">Categories</h1>
-<table class="table table-striped table-dark">
+<a href="manageCategory"><button>Add New Category</button></a>
+<table class="table table-striped">
   <thead>
     <tr>
     <th scope="col">Category Name</th>
@@ -16,8 +17,8 @@
       ?>
           <tr>
             <td><?php echo $category['label'];?></td>
-            <td><button>DELETE</button>
-            <button>EDIT</button></td>
+            <td><a href="manageCategory?cId=<?php echo $category['categoryId']?>"><button>EDIT</button></a>
+                <a href="category?cId=<?php echo $category['categoryId']?>"><button>DELETE</button></a>
             </td>
           </tr>
       <?php
