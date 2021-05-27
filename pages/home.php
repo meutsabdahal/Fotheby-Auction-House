@@ -1,6 +1,6 @@
 <?php
 	
-	$products = $products->findAll();
+	$products = $product->findAll();
 	$categories = $category->findAll();
 
 	$title = "Fothey's Auction House";
