@@ -4,14 +4,15 @@
 <div class="adminSection text-center">
 
   <h1 class="text-center mt-1 font-italic">Products</h1>
+  <a href="manageProduct"><button>Add New Product</button></a>
   <table class="table table-striped">
     <thead>
       <tr>
-        <th scope="col">Name</th>
-        <th scope="col">Price</th>
+        <th scope="col">Lot Number</th>
+        <th scope="col">Product Name</th>
+        <th scope="col">Estimated Price</th>
         <th scope="col">Bidding Time</th>
-        <th scope="col">Seller Name</th>
-        <th scope="col">Email</th>
+        <th scope="col">Artist</th>
         <th scope="col">Handle</th>
       </tr>
     </thead>
@@ -21,13 +22,13 @@
           foreach ($products as $product) {
         ?>
             <tr>
-              <td><?php echo $product['title'];?></td>
-              <td><?php echo $product['price'];?></td>
-              <td><?php echo $product['btime'];?></td>
-              <td><?php echo $product['name'];?></td>
-              <td><?php echo $product['email'];?></td>
-              <td><button>DELETE</button>
-              <button>EDIT</button></td>
+              <td><?php echo $product['lotNumber'];?></td>
+              <td><?php echo $product['productName'];?></td>
+              <td><?php echo $product['estimatedPrice'];?></td>
+              <td><?php echo $product['biddingDate'];?></td>
+              <td><?php echo $product['artist'];?></td>
+              <td><a href="product?pId=<?php echo $product['lotNumber']?>"><button>DELETE</button></a>
+              <a href="editProduct?pId=<?php echo $product['lotNumber']?>"><button>EDIT</button></a></td>
               </td>
             </tr>
         <?php

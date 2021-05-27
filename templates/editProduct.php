@@ -6,14 +6,14 @@
     <h1 class="mt-1 font-italic">Manage Product</h1>
 
     <form action="" method="post" enctype="multipart/form-data" class="mt-3">
-        <input type="hidden" name="lotNumber">
+        <input type="hidden" name="lotNumber" value="<?php echo $products['lotNumber'];?>">
 
         <label for="">Product Name</label><br>
-        <input type="text" name="productName"><br>
+        <input type="text" name="productName" value="<?php echo $products['productName'];?>"><br>
 
         <label for="">Description</label><br>
-        <textarea  name="description" value="" >
-
+        <textarea  name="description" >
+            <?php echo $products['description'];?>
         </textarea><br>
 
         <label for="">Choose Category</label><br>
@@ -27,16 +27,14 @@
         </select><br>
 
         <label for="">Estimated Price</label><br>
-        <input type="number" name="estimatedPrice"><br>
+        <input type="number" name="estimatedPrice" value="<?php echo $products['estimatedPrice'];?>"><br>
 
         <label for="">Artist Name</label><br>
-        <input type="text" name="artist"><br>
+        <input type="text" name="artist" value="<?php echo $products['artist'];?>"><br>
 
         <label for="">Bidding Date and Time</label><br>
-        <input type="datetime-local" name="biddingDate"><br>
+        <input type="datetime-local" name="biddingDate" value="<?php echo $products['biddingDate'];?> " ><br>
 
-        <label for="">Product Image</label><br>
-        <input type="file" name="productImage"><br><br>
 
         <input type="submit" name="submit" value="Save">
 
