@@ -1,11 +1,10 @@
 <?php
-    include 'adminNavigation.php';
+    include 'navigation.php';
 ?>
-<div class="adminSection text-center">
-
-  <h1 class="text-center mt-1 font-italic">Products</h1>
-  <a href="pendingProduct"><button class="ml-3">Pending Product</button></a>
-  <table class="table table-striped">
+<section>
+<h1 class="text-center mt-1 font-italic">My Products</h1>
+<a href=""><button class="ml-5 btn btn-success">Add Product</button></a>
+<table class="table table-striped">
     <thead>
       <tr>
         <th scope="col">Lot Number</th>
@@ -18,7 +17,7 @@
     </thead>
     <tbody>
 
-        <?php
+        <!-- <?php
           foreach ($products as $product) {
         ?>
             <tr>
@@ -32,10 +31,9 @@
             </tr>
         <?php
           }
-        ?>
+        ?> -->
 
-      
-
+    
     </tbody>
   </table>
-</div>
+</section>

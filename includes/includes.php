@@ -10,7 +10,7 @@
 
     $category = new DatabaseTable('category');
     $product = new DatabaseTable('products');
-    // $product = new DatabaseTable('product');
+    $products = new DatabaseTable('product');
     $client = new DatabaseTable('client');
 
 ?>

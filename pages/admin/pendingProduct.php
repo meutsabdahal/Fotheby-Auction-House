@@ -8,5 +8,5 @@
 	}
 	$title = "Product";
 
-	$content = loadTemplate('templates/adminProduct.php',['products' => $products]);
+	$content = loadTemplate('templates/adminPendingProduct.php',['products' => $products]);
 ?>
