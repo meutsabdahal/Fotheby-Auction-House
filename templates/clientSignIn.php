@@ -14,6 +14,6 @@
     </form>
     <hr/>
     <h1 class="text-center mt-1 font-italic">Not a User?</h1>
-    <center><button class="btn btn-success">Sign Up</button></center><br><br>
+    <center><a href="signUp"><button class="btn btn-success">Sign Up</button></a></center><br><br>
 
 </section>

@@ -12,7 +12,7 @@
     <th scope="col">Last Name</th>
     <th scope="col">Email</th>
     <th scope="col">Mobile</th>
-      <th scope="col">Handle</th>
+    <th scope="col">Handle</th>
     </tr>
   </thead>
   <tbody>
@@ -21,12 +21,11 @@
         foreach ($clients as $client) {
       ?>
           <tr>
-            <td><?php echo $client['FirstName'];?></td>
-            <td><?php echo $client['LastName'];?></td>
+            <td><?php echo $client['firstName'];?></td>
+            <td><?php echo $client['lastName'];?></td>
             <td><?php echo $client['email'];?></td>
-            <td><?php echo $client['Mob'];?></td>
-            <td><button>DELETE</button>
-            <button>EDIT</button></td>
+            <td><?php echo $client['phone'];?></td>
+            <td><button>DELETE</button></td>
             </td>
           </tr>
       <?php
