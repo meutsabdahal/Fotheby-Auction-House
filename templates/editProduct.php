@@ -1,7 +1,14 @@
-
 <?php
-    include 'adminNavigation.php';
+    
+    if (isset($_SESSION['sessClientId'])) {
+        include 'loggedInNavigation.php';
+    }
+ 
+    else
+        include 'navigation.php';
 ?>
+
+
 <div class="adminSection text-center">
     <h1 class="mt-1 font-italic">Manage Product</h1>
 

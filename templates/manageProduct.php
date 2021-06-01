@@ -1,7 +1,14 @@
-
 <?php
-    include 'adminNavigation.php';
+    
+    if (isset($_SESSION['sessClientId'])) {
+        include 'loggedInNavigation.php';
+    }
+ 
+    else
+        include 'navigation.php';
 ?>
+
+
 <div class="adminSection text-center">
     <h1 class="mt-1 font-italic">Manage Product</h1>
 
@@ -19,11 +26,13 @@
         <label for="">Choose Category</label><br>
         <select name="categoryId">
             <option>-- Select a Category --</option>
-                <?php
+            <?php
                 foreach ($categories as $category) {
-                    ?>
-                    <option value="<?php echo $category['categoryId'];?>"><?php echo $category['label'];?> </option>
-                    <?php } ?>
+            ?>
+                    <option value=""><?php echo $category['label']; ?></option>
+            <?php
+                }
+            ?>      
         </select><br>
 
         <label for="">Estimated Price</label><br>
@@ -37,6 +46,10 @@
 
         <label for="">Product Image</label><br>
         <input type="file" name="productImage"><br><br>
+
+        <input type="hidden" name="addedBy" value="<?php echo $_SESSION['sessClientId']; ?>">
+
+        <input type="hidden" name="status">
 
         <input type="submit" name="submit" value="Save">
 

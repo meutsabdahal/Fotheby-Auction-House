@@ -1,4 +1,6 @@
 <?php
+
+session_start();
 	$products = $product->find('pid', $_GET['pId']);
 	
     $categories = $category->findAll();

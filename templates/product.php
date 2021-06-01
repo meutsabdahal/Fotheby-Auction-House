@@ -1,6 +1,13 @@
 <?php
-    include 'navigation.php';
+    
+    if (isset($_SESSION['sessClientId'])) {
+        include 'loggedInNavigation.php';
+    }
+ 
+    else
+        include 'navigation.php';
 ?>
+
 <section>
     <hr/>
     <?php

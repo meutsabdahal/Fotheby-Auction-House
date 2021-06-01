@@ -1,5 +1,5 @@
 <?php
-
+	session_start();
 	$products = $product->find('pid', $_GET['pId']);
 
 	$bidProduct = $product->find('pid', $_REQUEST['pId']);

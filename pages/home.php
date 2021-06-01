@@ -1,5 +1,5 @@
 <?php
-	
+	session_start();
 	$products = $product->findAll();
 	$categories = $category->findAll();
 

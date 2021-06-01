@@ -1,6 +1,14 @@
 <?php
-    include 'navigation.php';
+    
+    if (isset($_SESSION['sessClientId'])) {
+        include 'loggedInNavigation.php';
+    }
+ 
+    else
+        include 'navigation.php';
 ?>
+
+
 <section>
     <div id="carouselExampleIndicators" class="carousel slide mt-2 " data-ride="carousel">
         <ol class="carousel-indicators ">
