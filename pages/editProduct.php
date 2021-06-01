@@ -2,6 +2,7 @@
 	session_start();
 
 	$categories = $category->findAll();
+	$dropDownCategory = $category->findAll();
     $products = $product->find('lotNumber',$_GET['pId']); 
     $products = $products->fetch();
 	
@@ -14,5 +15,5 @@
 
 	$title = "DashBoard";
 
-	$content = loadTemplate('templates/editProduct.php',['categories' => $categories, 'products' => $products]);
+	$content = loadTemplate('templates/editProduct.php',['categories' => $categories, 'products' => $products, 'dropDownCategory' => $dropDownCategory]);
 ?>

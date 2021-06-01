@@ -6,18 +6,18 @@
     ?>
             <div class="description">
                 <div class="mt-3 ml-3 float-left product-image">
-                    <img src="productimages/<?php echo $product['image'];?>" class="">
+                    <img src="productimages/<?php echo $product['productImage'];?>" class="">
                 </div>
 
                 <div class="product-desc text-center float-right">
-                    <h1><?php echo $product['title'];?></h1><br>
-                    <b style="font-size: 20px;">Starting Price: </b><?php echo $product['price'];?><br><br>
+                    <h1><?php echo $product['productName'];?></h1><br>
+                    <b style="font-size: 20px;">Starting Price: </b><?php echo $product['estimatedPrice'];?><br><br>
                     <b style="font-size: 20px;">Time Remaining: </b><br>
                     <div class="clock-builder-output ml-5">
                     </div><br>
                     <?php
 						while ($rw = $bidProduct->fetch()) {
-							$btime = $rw['btime'];
+							$btime = $rw['biddingDate'];
 						}
 						$t = strtotime($btime);
                     ?>

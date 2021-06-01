@@ -13,7 +13,8 @@
 		
 	}
 	$categories = $category->findAll();
+	$dropDownCategory = $category->findAll();
 	$title = "Manage Product";
 
-	$content = loadTemplate('templates/manageProduct.php',['categories' => $categories]);
+	$content = loadTemplate('templates/manageProduct.php',['categories' => $categories, 'dropDownCategory' => $dropDownCategory]);
 ?>

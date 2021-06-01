@@ -1,8 +1,8 @@
 <?php
 	session_start();
-	$products = $product->find('pid', $_GET['pId']);
+	$products = $product->find('lotNumber', $_GET['pId']);
 
-	$bidProduct = $product->find('pid', $_REQUEST['pId']);
+	$bidProduct = $product->find('lotNumber', $_REQUEST['pId']);
 
 	$categories = $category->findAll();
 

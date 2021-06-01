@@ -51,10 +51,10 @@
             foreach ($products as $product) {
             ?>
                 <div class="product-listing mt-3">
-                    <img src="productimages/<?php echo $product['image']; ?>" class="product-view-img ml-3 list-product-img">
-                    <b class="ml-2"><?php echo $product['title']; ?></b> 
+                    <img src="productimages/<?php echo $product['productImage']; ?>" class="product-view-img ml-3 list-product-img">
+                    <b class="ml-2"><?php echo $product['productName']; ?></b> 
                     <div class="float-right mr-5 mt-4">
-                        <a class="btn btn-primary" style="margin-left: 60%;" href="product?pId=<?php echo $product['pid']; ?>">View Product</a>
+                        <a class="btn btn-primary" style="margin-left: 60%;" href="product?pId=<?php echo $product['lotNumber']; ?>">View Product</a>
                     </div>
                 </div>   
             <?php

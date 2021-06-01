@@ -27,7 +27,7 @@
         <select name="categoryId">
             <option>-- Select a Category --</option>
                 <?php
-                foreach ($categories as $category) {
+                foreach ($dropDownCategory as $category) {
                     ?>
                     <option value="<?php echo $category['categoryId'];?>"><?php echo $category['label'];?> </option>
                     <?php } ?>
@@ -38,6 +38,9 @@
 
         <label for="">Artist Name</label><br>
         <input type="text" name="artist" value="<?php echo $products['artist'];?>"><br>
+
+        <label for="">Produced Year</label><br>
+        <input type="number" name="producedYear" value="<?php echo $products['producedYear'];?>"><br>
 
         <label for="">Bidding Date and Time</label><br>
         <input type="datetime-local" name="biddingDate" value="<?php echo $products['biddingDate'];?> " ><br>
