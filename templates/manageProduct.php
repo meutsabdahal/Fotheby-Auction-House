@@ -16,10 +16,10 @@
         <input type="hidden" name="lotNumber">
 
         <label for="">Product Name</label><br>
-        <input type="text" name="productName"><br>
+        <input type="text" name="productName" required><br>
 
         <label for="">Description</label><br>
-        <textarea  name="description" value="" >
+        <textarea  name="description" value="" required>
 
         </textarea><br>
 
@@ -36,25 +36,36 @@
         </select><br>
 
         <label for="">Estimated Price</label><br>
-        <input type="number" name="estimatedPrice"><br>
+        <input type="number" name="estimatedPrice" required><br>
 
         <label for="">Artist Name</label><br>
-        <input type="text" name="artist"><br>
+        <input type="text" name="artist" required><br>
 
         <label for="">Produced Year</label><br>
-        <input type="number" name="producedYear"><br>
+        <input type="number" name="producedYear" required><br>
 
         <label for="">Bidding Date and Time</label><br>
-        <input type="datetime-local" name="biddingDate"><br>
+        <input type="datetime-local" name="biddingDate" required><br>
 
         <label for="">Product Image</label><br>
-        <input type="file" name="productImage"><br><br>
+        <input type="file" name="productImage" required><br><br>
+
+        <h3 class="font-italic">Contact Details</h3>
+
+        <label for="">Name</label><br>
+        <input type="text" name="sellerName" required><br>
+
+        <label for="">Phone Number</label><br>
+        <input type="text" name="phone" required><br>
+
+        <label for="">Email</label><br>
+        <input type="email" name="email" required><br><br>
 
         <input type="hidden" name="addedBy" value="<?php echo $_SESSION['sessClientId']; ?>">
 
         <input type="hidden" name="status">
 
-        <input type="submit" name="submit" value="Save">
+        <input type="submit" name="submit" value="Save"><br><br>
 
         
     </form>

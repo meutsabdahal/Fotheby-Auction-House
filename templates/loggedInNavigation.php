@@ -18,6 +18,6 @@
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
         </form>
     </div>
-    <a href="profile"><button>Profile</button></a>
+    <a href="profile"><button class="btn btn-info ml-3">Profile</button></a>
 
 </nav>

@@ -6,7 +6,7 @@
     ?>
             <div class="description">
                 <div class="mt-3 ml-3 float-left product-image">
-                    <img src="productimages/<?php echo $product['productImage'];?>" class="">
+                    <img src="image/<?php echo $product['productImage'];?>" class="">
                 </div>
 
                 <div class="product-desc text-center float-right">
@@ -58,6 +58,8 @@
 
                     <form action="" method="post">
                         <input type="text" name="bidAmount" placeholder="Bidding Amount">
+                        <input type="hidden" name="productId" value="<?php echo $product['lotNumber'];?>">
+                        <input type="hidden" name="productId" value="">
                         <input type="submit" name="bid" class="btn btn-success ml-4">
                     </form>
                 </div>
