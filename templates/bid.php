@@ -57,12 +57,22 @@
                     <hr/>
 
                     <form action="" method="post">
-                        <input type="text" name="bidAmount" placeholder="Bidding Amount">
-                        <input type="hidden" name="productId" value="<?php echo $product['lotNumber'];?>">
-                        <input type="hidden" name="productId" value="">
+                        <input type="number" name="bidAmount" placeholder="Bidding Amount">
+                        <input type="hidden" name="lotNumber" value="<?php echo $product['lotNumber'];?>">
+                        <input type="hidden" name="clientId" value="">
                         <input type="submit" name="bid" class="btn btn-success ml-4">
                     </form>
                 </div>
+            </div>
+
+            <div>
+                <?php
+                    foreach ($bids as $bid) {
+                ?>
+                        <?php echo $bid['firstName'];?><br>
+                <?php
+                    }
+                ?>
             </div>
 </section>
     <?php

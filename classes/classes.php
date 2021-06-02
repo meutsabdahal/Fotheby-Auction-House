@@ -66,7 +66,52 @@
             $stmt->execute($criteria);
             return $stmt;
         }
+
+        function findOrderBy($field, $value, $field2){
+            global $pdo;
+            $stmt = $pdo->prepare("SELECT * FROM $this->table WHERE $field =:value ORDER BY $field2 DESC");
+            $criteria = [
+                "value" => $value
+            ];
+            $stmt->execute($criteria);
+            return $stmt;
+        }
+
+        function joinTable($table2,$value,$value2){
+            global $pdo;
+            $stmt = $pdo->prepare("SELECT $this->table.*, $table2.* FROM $this->table JOIN $table2 ON 
+            $this->table.$value = $table2.$value2");
+            $stmt->execute();
+            return $stmt;
+        }
+
+
+
+        function joinThreeTableCondition($table2,$value, $value2, $table3, $value3 , $value4, $field, $value5){
+            global $pdo;
+            $stmt = $pdo->prepare("SELECT $this->table.*, $table2.*, $table3.* FROM $this->table JOIN $table2 ON 
+                $this->table.$value = $table2.$value2 JOIN $table3 ON $table2.$value3 = $table3.$value4 WHERE $table2.$field = :value5");
+            $criteria = [
+                "value5" => $value5
+            ];  
+            $stmt->execute($criteria);
+            return $stmt;
+        }
+
+
+
     }
 
 
 ?>
+
+<!-- function joinTableCondition($table2,$value,$value2,$field,$value3){
+            global $pdo;
+            $stmt = $pdo->prepare("SELECT $this->table.*, $table2.* FROM $this->table JOIN $table2 ON 
+              $this->table.$value = $table2.$value2 WHERE $field =:value3");
+              $criteria = [
+                "value3" => $value3
+            ];
+            $stmt->execute($criteria);
+            return $stmt;
+        } -->

@@ -11,6 +11,8 @@
 
 <section class="home">
     <hr />
+    <h1 class="text-center mt-1 font-italic">Products</h1>
+    <hr />
     <div class=" mt-2 ml-5">
         <?php
             foreach ($products as $product) {

@@ -12,5 +12,6 @@
     // $products = new DatabaseTable('products');
     $product = new DatabaseTable('product');
     $client = new DatabaseTable('client');
+    $productBid = new DatabaseTable('bid');
 
 ?>
