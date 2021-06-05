@@ -33,7 +33,11 @@
 					// print_r($_POST);
 				}
 				else
-					echo "Must me higher";
+					?>
+					<script>
+						alert("Please Enter Higher Amount");
+					</script>
+					<?php
 			}
 
 		}
