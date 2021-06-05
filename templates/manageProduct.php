@@ -29,7 +29,7 @@
             <?php
                 foreach ($dropDownCategory as $category) {
             ?>
-                    <option value=""><?php echo $category['label']; ?></option>
+                    <option value="<?php echo $category['categoryId']; ?>"><?php echo $category['label']; ?></option>
             <?php
                 }
             ?>      

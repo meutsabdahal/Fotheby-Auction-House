@@ -59,17 +59,17 @@
                     <form action="" method="post">
                         <input type="number" name="bidAmount" placeholder="Bidding Amount">
                         <input type="hidden" name="lotNumber" value="<?php echo $product['lotNumber'];?>">
-                        <input type="hidden" name="clientId" value="">
+                        <input type="hidden" name="clientId" value="<?php echo $_SESSION['sessClientId']; ?>">
                         <input type="submit" name="bid" class="btn btn-success ml-4">
                     </form>
                 </div>
             </div>
 
-            <div>
+            <div class="text-center">
                 <?php
                     foreach ($bids as $bid) {
                 ?>
-                        <?php echo $bid['firstName'];?><br>
+                        <b>  <?php echo $bid['firstName'];?></b> bidded for <b>Rs. <?php echo $bid['bidAmount']; ?></b><br>
                 <?php
                     }
                 ?>
