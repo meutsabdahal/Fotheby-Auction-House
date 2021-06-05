@@ -27,8 +27,8 @@
               <td><?php echo $product['estimatedPrice'];?></td>
               <td><?php echo $product['biddingDate'];?></td>
               <td><?php echo $product['artist'];?></td>
-              <td><a href=""><button>Add</button></a>
-              <a href="product?pId=<?php echo $product['lotNumber']?>"><button>DELETE</button></a>
+              <td><a href="pendingProduct?ppId=<?php echo $product['lotNumber']?>"><button>Add</button></a>
+              <a href="pendingProduct?pId=<?php echo $product['lotNumber']?>"><button>DELETE</button></a>
               </td>
               </td>
             </tr>

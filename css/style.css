@@ -89,6 +89,17 @@ table{
     min-height: 650px;
 }
 
+.dashboard-container{
+    border-radius: 30px;
+    margin-left: 3%;
+    border: 2px solid #FFFFFF;
+    color: #000000;
+    padding: 35px;
+    width: 200px;
+    min-height: 80px;
+    background-color: #E7E3EB;
+}
+
 
 footer{
     background-color: red;

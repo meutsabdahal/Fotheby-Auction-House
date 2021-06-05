@@ -1,6 +1,6 @@
 <?php
 	session_start();
-	$products = $product->findAll();
+	$products = $product->find('status', 1);
 	$categories = $category->findAll();
 
 	$title = "Fothey's Auction House";

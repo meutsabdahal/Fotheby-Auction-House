@@ -98,6 +98,35 @@
             return $stmt;
         }
 
+        
+        function countRow(){
+            global $pdo;
+            $stmt = $pdo->prepare("SELECT COUNT(*) FROM $this->table");
+            $stmt->execute();
+            return $stmt;
+        }
+        
+        function countRowCondition($field, $value){
+            global $pdo;
+            $stmt = $pdo->prepare("SELECT COUNT(*) FROM $this->table WHERE $field =:value");
+            $criteria = [
+                "value" => $value
+            ];
+            $stmt->execute($criteria);
+            return $stmt;
+        }
+        
+              
+        function updateStatus($field, $field2, $value2){
+            global $pdo;
+            $stmt = $pdo->prepare("UPDATE $this->table SET $field = 1 WHERE $field2 = :value2");
+            $criteria = [
+                "value2" => $value2 
+            ];
+            $stmt->execute($criteria);
+            return $stmt;
+        }
+
 
 
     }
@@ -105,13 +134,3 @@
 
 ?>
 
-<!-- function joinTableCondition($table2,$value,$value2,$field,$value3){
-            global $pdo;
-            $stmt = $pdo->prepare("SELECT $this->table.*, $table2.* FROM $this->table JOIN $table2 ON 
-              $this->table.$value = $table2.$value2 WHERE $field =:value3");
-              $criteria = [
-                "value3" => $value3
-            ];
-            $stmt->execute($criteria);
-            return $stmt;
-        } -->
