@@ -86,7 +86,6 @@
         }
 
 
-
         function joinThreeTableCondition($table2,$value, $value2, $table3, $value3 , $value4, $field, $value5){
             global $pdo;
             $stmt = $pdo->prepare("SELECT $this->table.*, $table2.*, $table3.* FROM $this->table JOIN $table2 ON 
