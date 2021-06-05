@@ -12,6 +12,7 @@
     // $products = new DatabaseTable('products');
     $product = new DatabaseTable('product');
     $client = new DatabaseTable('client');
+    $admin = new DatabaseTable('admin');
     $productBid = new DatabaseTable('bid');
 
 ?>

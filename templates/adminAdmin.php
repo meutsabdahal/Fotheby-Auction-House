@@ -1,7 +1,8 @@
 <?php
     include 'adminNavigation.php';
 ?>
-<h1 class="text-center mt-1 font-italic">Customers</h1>
+<h1 class="text-center mt-1 font-italic">Admins</h1>
+<a href="addAdmin"><button>Add New Admin</button></a>
 <table class="table table-striped table-dark">
   <thead>
     <tr>
@@ -18,21 +19,19 @@
   <tbody>
 
       <?php
-        foreach ($clients as $client) {
+        foreach ($admins as $admin) {
       ?>
           <tr>
-            <td><?php echo $client['firstName'];?></td>
-            <td><?php echo $client['lastName'];?></td>
-            <td><?php echo $client['email'];?></td>
-            <td><?php echo $client['phone'];?></td>
-            <td><button>DELETE</button></td>
+            <td><?php echo $admin['firstName'];?></td>
+            <td><?php echo $admin['lastName'];?></td>
+            <td><?php echo $admin['email'];?></td>
+            <td><?php echo $admin['phone'];?></td>
+            <td><a href="admin?aId=<?php echo $admin['adminId'];?>"><button>DELETE</button></a></td>
             </td>
           </tr>
       <?php
         }
       ?>
-
-    
 
   </tbody>
 </table>

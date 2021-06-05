@@ -1,7 +1,12 @@
 <?php
-	$clients = $client->findAll();
+	session_start();
+	if (isset($_SESSION['sessAdminId'])) {
+		$clients = $client->findAll();
 
-	$title = "Category";
+		$title = "Category";
 
-	$content = loadTemplate('templates/adminCustomer.php',['clients' => $clients]);
+		$content = loadTemplate('templates/adminCustomer.php',['clients' => $clients]);
+	}
+	else
+		include 'adminLogIn.php';
 ?>
