@@ -1,41 +1,47 @@
 <?php
 	session_start();
-	$products = $product->find('lotNumber', $_GET['pId']);
+	if (isset($_SESSION['sessClientId'])) {
 
-	$bidProduct = $product->find('lotNumber', $_REQUEST['pId']);
 
-	$bid = $productBid->find('lotNumber', $_REQUEST['pId']);
-	
-	$hoho = $product->find('lotNumber', $_GET['pId']);
-	$hoho = $hoho->fetch();
+		$products = $product->find('lotNumber', $_GET['pId']);
 
-	$hehe = $productBid->findOrderBy('lotNumber', $_GET['pId'], 'bidAmount');
-	$hehe = $hehe->fetch();
+		$bidProduct = $product->find('lotNumber', $_REQUEST['pId']);
 
-	$categories = $category->findAll();
+		$bid = $productBid->find('lotNumber', $_REQUEST['pId']);
+		
+		$hoho = $product->find('lotNumber', $_GET['pId']);
+		$hoho = $hoho->fetch();
 
-	$bids = $client->joinThreeTableCondition('bid', 'clientId', 'clientId', 'product', 'lotNumber', 'lotNumber', 'lotNumber', $_GET['pId']);
+		$hehe = $productBid->findOrderBy('lotNumber', $_GET['pId'], 'bidAmount');
+		$hehe = $hehe->fetch();
 
-	if (isset($_POST['bid'])) {
-		unset($_POST['bid']);
+		$categories = $category->findAll();
 
-		while ($r = $products->fetch()) {
-			$bt = $r["biddingDate"];
-		}
+		$bids = $client->joinThreeTableCondition('bid', 'clientId', 'clientId', 'product', 'lotNumber', 'lotNumber', 'lotNumber', $_GET['pId']);
 
-		if ($bt > 0) {
-			if ($_POST['bidAmount'] > $hehe['bidAmount'] && $_POST['bidAmount'] > $hoho['estimatedPrice']) {
-				$productBid->insert($_POST);
-				header("Refresh:0");
-				// print_r($_POST);
+		if (isset($_POST['bid'])) {
+			unset($_POST['bid']);
+
+			while ($r = $products->fetch()) {
+				$bt = $r["biddingDate"];
 			}
-			else
-				echo "Must me higher";
+
+			if ($bt > 0) {
+				if ($_POST['bidAmount'] > $hehe['bidAmount'] && $_POST['bidAmount'] > $hoho['estimatedPrice']) {
+					$productBid->insert($_POST);
+					header("Refresh:0");
+					// print_r($_POST);
+				}
+				else
+					echo "Must me higher";
+			}
+
 		}
 
+		$title = "Fothey's Auction House";
+
+		$content = loadTemplate('templates/bid.php',['products' => $products, 'categories' => $categories, 'bidProduct' => $bidProduct, 'bids' => $bids]);
 	}
-
-	$title = "Fothey's Auction House";
-
-	$content = loadTemplate('templates/bid.php',['products' => $products, 'categories' => $categories, 'bidProduct' => $bidProduct, 'bids' => $bids]);
+	else
+		include 'signIn.php';
 ?>

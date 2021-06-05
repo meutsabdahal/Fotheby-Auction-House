@@ -11,6 +11,7 @@
 <section>
 <h1 class="text-center mt-1 font-italic">My Products</h1>
 <a href="manageProduct"><button class="ml-5 btn btn-success">Add Product</button></a>
+<a href="signOut"><button class="mr-5 float-right btn btn-warning">Sign Out</button></a>
 <center>
 
 <table class="table table-striped text-center">
