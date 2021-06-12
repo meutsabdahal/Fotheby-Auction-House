@@ -134,6 +134,17 @@
             return $stmt;
         }
 
+        // function declaration to find data by search
+        function findBySearch($field, $value){
+            global $pdo;
+            $stmt = $pdo->prepare("SELECT * FROM $this->table WHERE $field LIKE :value");
+            $criteria = [
+                "value" => $value
+            ];
+            $stmt->execute($criteria);
+            return $stmt;
+        }
+
 
 
     }

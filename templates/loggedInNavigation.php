@@ -14,9 +14,9 @@
             }
         ?>
         </ul>
-        <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        <form class="form-inline my-2 my-lg-0" action="productBySearch" method="post" >
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit" name="submit">Search</button>
         </form>
     </div>
     <a href="profile"><button class="btn btn-info ml-3">Profile</button></a>
