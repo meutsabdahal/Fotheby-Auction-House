@@ -8,7 +8,7 @@
         include 'navigation.php';
 ?>
 
-
+<!-- showing all approved products -->
 <section class="home">
     <hr />
     <h1 class="text-center mt-1 font-italic">Products</h1>

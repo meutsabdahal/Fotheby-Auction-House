@@ -2,6 +2,7 @@
     include 'adminNavigation.php';
 ?>
 <section>
+    <!-- dashboard details -->
     <h1 class="mt-1 font-italic text-center">Dashboard</h1>
     <div class="container-product">
     <div class="row">

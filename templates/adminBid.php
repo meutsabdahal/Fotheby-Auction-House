@@ -2,11 +2,12 @@
     include 'adminNavigation.php';
 ?>
 <h1 class="text-center mt-1 font-italic">Bidding Details</h1>
-
+<!-- table to show details of bidding -->
 <table class="table table-striped table-dark">
   <thead>
     <tr>
     <table class="table table-striped">
+    <!-- column title of table -->
   <thead>
     <tr>
     <th scope="col">Lot Number</th>
@@ -17,6 +18,7 @@
 
     </tr>
   </thead>
+  <!-- displaying rows of the table -->
   <tbody>
 
       <?php

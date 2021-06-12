@@ -8,7 +8,7 @@
         include 'navigation.php';
 ?>
 
-
+<!-- showing products by category -->
 <section class="home">
     <hr />
     <h1 class="text-center mt-1 font-italic"><?php echo $categoryName['label'];?></h1>

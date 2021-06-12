@@ -3,13 +3,16 @@
 ?>
 <h1 class="text-center mt-1 font-italic">Categories</h1>
 <a href="manageCategory"><button>Add New Category</button></a>
+<!-- table to show details of categorty table -->
 <table class="table table-striped">
   <thead>
+  <!-- title of the column -->
     <tr>
     <th scope="col">Category Name</th>
       <th scope="col">Handle</th>
     </tr>
   </thead>
+  <!-- displaying rows of the table -->
   <tbody>
 
       <?php

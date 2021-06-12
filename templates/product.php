@@ -7,7 +7,7 @@
     else
         include 'navigation.php';
 ?>
-
+<!-- showing product details -->
 <section>
     <hr/>
     <?php

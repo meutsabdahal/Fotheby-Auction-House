@@ -2,6 +2,7 @@
     include 'adminNavigation.php';
 ?>
 <h1 class="text-center mt-1 font-italic">Add Admin</h1><br>
+<!-- form to add new admin -->
 <form action="" method="post" class="text-center">
         <input type="hidden" name="admin[adminId]">
 

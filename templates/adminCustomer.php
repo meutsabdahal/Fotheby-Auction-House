@@ -1,11 +1,13 @@
 <?php
     include 'adminNavigation.php';
 ?>
-<h1 class="text-center mt-1 font-italic">Customers</h1>
+<h1 class="text-center mt-1 font-italic">Clients</h1>
+<!-- table to show details of clients -->
 <table class="table table-striped table-dark">
   <thead>
     <tr>
     <table class="table table-striped">
+    <!-- title of table column -->
   <thead>
     <tr>
     <th scope="col">First Name</th>
@@ -16,7 +18,7 @@
     </tr>
   </thead>
   <tbody>
-
+  <!-- displaying rows of table -->
       <?php
         foreach ($clients as $client) {
       ?>

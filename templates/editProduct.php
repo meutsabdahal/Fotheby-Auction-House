@@ -11,7 +11,7 @@
 
 <div class="adminSection text-center">
     <h1 class="mt-1 font-italic">Manage Product</h1>
-
+    <!-- product edit form -->
     <form action="" method="post" enctype="multipart/form-data" class="mt-3">
         <input type="hidden" name="lotNumber" value="<?php echo $products['lotNumber'];?>">
 

@@ -1,6 +1,7 @@
 <?php
     include 'adminNavigation.php';
 ?>
+<!-- form to manage category -->
 <div class="adminSection text-center">
     <h1 class="mt-1 font-italic">Manage Category</h1>
 

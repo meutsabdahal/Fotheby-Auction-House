@@ -4,9 +4,10 @@
 <div class="adminSection text-center">
 
   <h1 class="text-center mt-1 font-italic">Pending Products</h1>
-
+<!-- table to show details of pending products -->
   <table class="table table-striped">
     <thead>
+    <!-- title of table column -->
       <tr>
         <th scope="col">Lot Number</th>
         <th scope="col">Product Name</th>
@@ -17,7 +18,7 @@
       </tr>
     </thead>
     <tbody>
-
+        <!-- displaying rows of table -->
         <?php
           foreach ($products as $product) {
         ?>

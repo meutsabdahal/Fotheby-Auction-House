@@ -1,3 +1,4 @@
+<!-- admin navigation -->
 <div class="adminNav float-left">
     <nav class="">
         <ul class="">

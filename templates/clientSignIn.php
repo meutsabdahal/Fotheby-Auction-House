@@ -3,6 +3,7 @@
 ?>
 <section>
     <h1 class="text-center mt-1 font-italic">SignIn to your Account</h1>
+    <!-- login form -->
     <form action="" method="post" class="text-center">
         <label for="">Email Address</label><br>
         <input type="text" name="email"><br>

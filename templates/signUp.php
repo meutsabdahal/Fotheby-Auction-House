@@ -1,6 +1,7 @@
 <?php
     include 'navigation.php';
 ?>
+<!-- client registration form -->
 <section>
     <h1 class="text-center mt-1 font-italic">Register your Account</h1>
     <form action="" method="post" class="text-center">

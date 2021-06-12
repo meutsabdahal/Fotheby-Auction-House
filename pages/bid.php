@@ -2,22 +2,25 @@
 	session_start();
 	if (isset($_SESSION['sessClientId'])) {
 
-
-		$products = $product->find('lotNumber', $_GET['pId']);
-
+		// calling function to find product with lotnumeber of pId
 		$bidProduct = $product->find('lotNumber', $_REQUEST['pId']);
 
+		// calling function to find bid with lotnumeber of pId
 		$bid = $productBid->find('lotNumber', $_REQUEST['pId']);
 		
-		$hoho = $product->find('lotNumber', $_GET['pId']);
-		$hoho = $hoho->fetch();
+		// calling function to find product with lotnumeber of pId and fetching data
+		$auction = $product->find('lotNumber', $_GET['pId']);
+		$auction = $auction->fetch();
 
-		$hehe = $productBid->findOrderBy('lotNumber', $_GET['pId'], 'bidAmount');
-		$hehe = $hehe->fetch();
+		// calling function to find bid with lotnumeber of pId with decending order of bidAmount
+		$bidding = $productBid->findOrderBy('lotNumber', $_GET['pId'], 'bidAmount');
+		$bidding = $bidding->fetch();
 
+		// calling function to find all categories
 		$categories = $category->findAll();
 
-		$bids = $client->joinThreeTableCondition('bid', 'clientId', 'clientId', 'product', 'lotNumber', 'lotNumber', 'lotNumber', $_GET['pId']);
+		// calling function to join three tables with conditions
+		$bids = $client->joinThreeTableCondition('bid', 'clientId', 'clientId', 'product', 'lotNumber', 'lotNumber', 'lotNumber', $_GET['pId']);		$products = $product->find('lotNumber', $_GET['pId']);
 
 		if (isset($_POST['bid'])) {
 			unset($_POST['bid']);
@@ -26,12 +29,13 @@
 				$bt = $r["biddingDate"];
 			}
 
+			// comparing the entered value and inserting entered bidamount
 			if ($bt > 0) {
-				if ($_POST['bidAmount'] > $hehe['bidAmount'] && $_POST['bidAmount'] > $hoho['estimatedPrice']) {
+				if ($_POST['bidAmount'] > $bidding['bidAmount'] && $_POST['bidAmount'] > $auction['estimatedPrice']) {
 					$productBid->insert($_POST);
 					header("Refresh:0");
-					// print_r($_POST);
 				}
+				// alert messages when buyer enter lower amount
 				else
 					?>
 					<script>
@@ -41,9 +45,9 @@
 			}
 
 		}
-
+		// title of page
 		$title = "Fothey's Auction House";
-
+		// calling function to show contents on the page
 		$content = loadTemplate('templates/bid.php',['products' => $products, 'categories' => $categories, 'bidProduct' => $bidProduct, 'bids' => $bids]);
 	}
 	else

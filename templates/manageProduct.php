@@ -8,7 +8,7 @@
         include 'navigation.php';
 ?>
 
-
+<!-- form to add new products -->
 <div class="adminSection text-center">
     <h1 class="mt-1 font-italic">Manage Product</h1>
 

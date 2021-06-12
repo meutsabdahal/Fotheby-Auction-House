@@ -1,6 +1,7 @@
 <section>
     <center>
     <h1 class="text-center mt-1 font-italic">LogIn to your Account</h1><br><br>
+    <!-- login form -->
     <form action="" method="post">  
         <label>Email Address</label><br>
         <input type="text" name="email"><br>

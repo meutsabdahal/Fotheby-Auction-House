@@ -21,6 +21,7 @@
 						}
 						$t = strtotime($btime);
                     ?>
+                    <!-- displying clock countdown -->
                     <script type="text/javascript" src="clock_assets/flipclock.js"></script>
                     <script type="text/javascript">
                         $(function(){
@@ -55,7 +56,7 @@
                         });
                     </script>
                     <hr/>
-
+                        <!-- form to enter bidding amount -->
                     <form action="" method="post">
                         <input type="number" name="bidAmount" placeholder="Bidding Amount">
                         <input type="hidden" name="lotNumber" value="<?php echo $product['lotNumber'];?>">
@@ -64,7 +65,7 @@
                     </form>
                 </div>
             </div>
-
+            <!-- displaying all the bidded amount of that table -->
             <div class="text-center">
                 <?php
                     foreach ($bids as $bid) {

@@ -1,5 +1,5 @@
 <?php
-    // function to load templates
+    // function declaration to load templates
     function loadTemplate($filename, $tempVars){
         extract($tempVars);
         require $filename;

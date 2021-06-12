@@ -13,7 +13,7 @@
 <a href="manageProduct"><button class="ml-5 btn btn-success">Add Product</button></a>
 <a href="signOut"><button class="mr-5 float-right btn btn-warning">Sign Out</button></a>
 <center>
-
+<!-- table to show added product details -->
 <table class="table table-striped text-center">
     <thead>
       <tr>
@@ -25,6 +25,7 @@
         <th scope="col">Handle</th>
       </tr>
     </thead>
+    <!-- rows of table -->
     <tbody>
         <?php
           foreach ($products as $product) {

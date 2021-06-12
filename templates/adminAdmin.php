@@ -4,9 +4,11 @@
 <h1 class="text-center mt-1 font-italic">Admins</h1>
 <a href="addAdmin"><button>Add New Admin</button></a>
 <table class="table table-striped table-dark">
+<!-- table to show all admin details -->
   <thead>
     <tr>
     <table class="table table-striped">
+    <!-- title of table column -->
   <thead>
     <tr>
     <th scope="col">First Name</th>
@@ -16,6 +18,7 @@
     <th scope="col">Handle</th>
     </tr>
   </thead>
+  <!-- displaying rows of table -->
   <tbody>
 
       <?php

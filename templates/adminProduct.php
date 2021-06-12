@@ -5,7 +5,9 @@
 
   <h1 class="text-center mt-1 font-italic">Products</h1>
   <a href="pendingProduct"><button class="ml-3">Pending Product</button></a>
+  <!-- table to show details of approved products -->
   <table class="table table-striped">
+  <!-- title of table column -->
     <thead>
       <tr>
         <th scope="col">Lot Number</th>
@@ -17,7 +19,7 @@
       </tr>
     </thead>
     <tbody>
-
+        <!-- displaying table rows -->
         <?php
           foreach ($products as $product) {
         ?>
