@@ -32,7 +32,7 @@
     </div>
 
     <footer class="text-center">
-        &copy; <?php echo date("Y"); ?> Fothey's Auction House
+      
     </footer>
     
 </body>
